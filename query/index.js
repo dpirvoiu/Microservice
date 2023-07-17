@@ -54,7 +54,7 @@ app.listen(4002, async () => {
     console.log(err.message);
   });
 
-  for (let event of res.data) {
+  for (let event of res?.data) {
     console.log("Processing event:", event.type);
 
     handleEvent(event.type, event.data);
